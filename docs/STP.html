@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Cheryl Isabella" />
+
+
+<title>Segmentation, Targeting, Positioning</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">DisneyPlus</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="STP.html">STP</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><strong>Segmentation, Targeting,
+Positioning</strong></h1>
+<h4 class="author">Cheryl Isabella</h4>
+
+</div>
+
+
+<p><br></p>
+<div id="importing-the-data-set" class="section level1">
+<h1>Importing the data set</h1>
+<ul>
+<li>The data set has been cleaned prior to importing; further data
+preparation can be included.</li>
+</ul>
+<p><br></p>
+</div>
+<div id="data-preparation" class="section level1">
+<h1>1. Data Preparation</h1>
+<ul>
+<li>Further data preparation.</li>
+<li>Catergorisation of variables into segmentation bases and
+descriptors.</li>
+</ul>
+<pre class="r"><code>disney1 &lt;-  disney %&gt;%  
+  filter(Age &lt; 24) %&gt;%  #filter for young consumer segment: &lt;24 years old 
+  mutate(&quot;Nationality_4_TEXT&quot; = NULL) #remove respondent.ID(unnecessary), nationality_4_text columns(too many missing values)
+head(disney1)</code></pre>
+<pre><code>##   Respondent.ID Gender Age Nationality Living HHSize StreamingUsage Device
+## 1             1      1  17           2      1      5              5      4
+## 2             2      2  17           2      3      1              5      3
+## 3             3      1  19           4      2     16              1      1
+## 4             4      2  17           3      1      5              2      4
+## 5             5      2  18           3      1      4              3      1
+## 6             6      1  18           2      1      6              4      1
+##   UnaidedbrandrecallDisney WTP Pastime Entertainment Recommendation ZStreamingUsage
+## 1                        0  15       4           6.0           3.50         1.50446
+## 2                        1  20       5           5.0           4.50         1.50446
+## 3                        0  20       2           5.5           4.00        -1.23897
+## 4                        0  30       3           5.5           4.50        -0.55311
+## 5                        0  15       6           6.5           5.25         0.13275
+## 6                        0  25       4           7.0           4.00         0.81860
+##   ZEntertainment ZRecommendation   ZPastime
+## 1     -1.2385096     -0.37750756  0.1604940
+## 2      0.6937862      0.49366374  0.8086429
+## 3      0.6937862      0.05807809 -1.1358037
+## 4      0.8870158      0.49366374 -0.4876549
+## 5     -1.2385096      1.14704221  1.4567917
+## 6      1.4667046      0.05807809  0.1604940</code></pre>
+<pre class="r"><code>#Base
+base &lt;- matrix(disney1$WTP, nrow = 94, ncol=1)
+basis = disney1 %&gt;%select(WTP)
+descriptors = disney1 %&gt;% select(-WTP, -StreamingUsage, -Recommendation, -Pastime, -Entertainment )</code></pre>
+<p><br> Application of k-means clustering to form relevant segments in
+the data using consumers’ WTP (in €) as the basis for segmentation.
+<br></p>
+<pre class="r"><code>#make this example reproducible
+set.seed(1)
+
+#perform k-means clustering with k = 2 clusters
+kmbasis &lt;- kmeans(basis, centers = 2, nstart = 25) #means that R will try 25 different random starting assignments and then select the best results
+kmbasis</code></pre>
+<pre><code>## K-means clustering with 2 clusters of sizes 56, 38
+## 
+## Cluster means:
+##         WTP
+## 1  7.874821
+## 2 18.894211
+## 
+## Clustering vector:
+##  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1
+## [42] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+## [83] 1 1 1 1 1 1 1 1 1 1 1 1
+## 
+## Within cluster sum of squares by cluster:
+## [1] 860.0826 975.7349
+##  (between_SS / total_SS =  60.0 %)
+## 
+## Available components:
+## 
+## [1] &quot;cluster&quot;      &quot;centers&quot;      &quot;totss&quot;        &quot;withinss&quot;     &quot;tot.withinss&quot;
+## [6] &quot;betweenss&quot;    &quot;size&quot;         &quot;iter&quot;         &quot;ifault&quot;</code></pre>
+<pre class="r"><code>kmbasis$cluster</code></pre>
+<pre><code>##  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1
+## [42] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+## [83] 1 1 1 1 1 1 1 1 1 1 1 1</code></pre>
+<pre class="r"><code>kmeans &lt;- as.factor(kmbasis$cluster)
+kmeans</code></pre>
+<pre><code>##  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1
+## [42] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+## [83] 1 1 1 1 1 1 1 1 1 1 1 1
+## Levels: 1 2</code></pre>
+<p><strong>Results:</strong></p>
+<ul>
+<li>Clusters contain 56 and 38 observations respectively.</li>
+<li>Cluster 1 has an average WTP (in €) of 7.87(3sf) while Cluster 2 has
+an average of 18.9(3sf).</li>
+<li>Clusters have a compactness(similarity) of 60%.</li>
+</ul>
+<p><br></p>
+</div>
+<div id="validating-cluster-partitions" class="section level1">
+<h1>2. Validating Cluster Partitions</h1>
+<ul>
+<li>Use of appropriate hypothesis test to check whether the two
+resulting clusters significantly differ in terms of their WTP (in
+€).</li>
+<li>Also, the average WTP (in €) for each cluster is shown. <br></li>
+</ul>
+<pre class="r"><code>#Mean for WTP cluster 1:
+cluster1 &lt;- basis %&gt;% filter(kmeans == 1)
+mean(cluster1$WTP) #mean = 7.874821</code></pre>
+<pre><code>## [1] 7.874821</code></pre>
+<pre class="r"><code>#Mean for WTP cluster 2:
+cluster2 &lt;- basis %&gt;% filter(kmeans == 2)
+mean(cluster2$WTP) #mean = 18.89421</code></pre>
+<pre><code>## [1] 18.89421</code></pre>
+<pre class="r"><code>#T-test for differences in mean (WTP):
+
+#Creation of T-test function
+ttest &lt;- function(training, testing) {
+  x1_mean &lt;- mean(testing)
+  x2_mean &lt;- mean(training)
+  s1 &lt;- sd(testing)
+  s2 &lt;- sd(training)
+  n1 &lt;- length(testing)
+  n2 &lt;- length(training)
+  dfs &lt;- min(n1-1, n2-1)
+  tdata &lt;- (x1_mean - x2_mean) / sqrt((s1^2/n1)+(s2^2/n2))
+  tdata
+  pvalue &lt;- 2*pt(abs(tdata), df = dfs, lower.tail = FALSE)
+  return(pvalue)
+}
+
+ttest(training = cluster1$WTP, testing = cluster2$WTP) #t-test result: p-value of 2.066837e-13</code></pre>
+<pre><code>## [1] 2.066837e-13</code></pre>
+<p><strong>Results:</strong></p>
+<ul>
+<li>The average WTP (in €) for ClusterS 1 and 2 are 7.87(3sf) and
+18.9(3sf) respectively.</li>
+<li>Since the p-value of the t-statistic is much smaller than the 5% or
+10% significance level, it implies that there is a statistically
+significant differences in the means of the clusters. Normality can be
+assumed as the data set is small.</li>
+</ul>
+<p><br></p>
+</div>
+<div id="analysis" class="section level1">
+<h1>3. Analysis</h1>
+<p>Analysis for significant differences in the demographic variables
+(i.e., gender, nationality, household size) and the device they
+predominately use for online streaming between the two clusters.
+<br></p>
+<pre class="r"><code>#Since all the demographic variables are numerical, the t-test will be used.
+#List of demographic variables: gender, age, nationality, living, HHsize
+
+cluster1d = descriptors[which(kmbasis$cluster == 1),] #split descriptors into 2 clusters
+cluster2d = descriptors[which(kmbasis$cluster == 2),]
+
+#Hypothesis test for Gender:
+x1 &lt;- sum(cluster1d$Gender == 1)
+x2 &lt;- sum(cluster2d$Gender == 1)
+n1 &lt;- length(cluster1d$Gender)
+n2 &lt;- length(cluster2d$Gender)
+p1 &lt;- x1 / n1
+p2 &lt;- x2 / n2
+ppooled &lt;- (x1+x2) / (n1+n2)
+zdata &lt;- (p1-p2) / sqrt(ppooled*(1-ppooled)*((1/n1)+(1/n2)))
+pvalue &lt;- 2*pnorm(abs(zdata), lower.tail = FALSE)
+pvalue</code></pre>
+<pre><code>## [1] 0.1499454</code></pre>
+<pre class="r"><code>#Hypothesis test for Age:
+ttest(training = cluster1d$Age, testing = cluster2d$Age)</code></pre>
+<pre><code>## [1] 1.835906e-05</code></pre>
+<pre class="r"><code>#Hypothesis test for Nationality:
+freq1_1 &lt;- sum(cluster1d$Nationality == 1)
+freq1_2 &lt;- sum(cluster1d$Nationality == 2)
+freq1_3 &lt;- sum(cluster1d$Nationality == 3)
+freq1_4 &lt;- sum(cluster1d$Nationality == 4)
+
+freq2_1 &lt;- sum(cluster2d$Nationality == 1)
+freq2_2 &lt;- sum(cluster2d$Nationality == 2)
+freq2_3 &lt;- sum(cluster2d$Nationality == 3)
+freq2_4 &lt;- sum(cluster2d$Nationality == 4)
+freq_table &lt;- as.table(rbind(c(freq1_1, freq1_2, freq1_3, freq1_4),
+                             c(freq2_1, freq2_2, freq2_3, freq2_4)))
+dimnames(freq_table) &lt;- list(
+Data.Set = c(&quot;Cluster 1&quot;, &quot;Cluster 2&quot;),
+Status = c(&quot;Dutch&quot;, &quot;German&quot;, &quot;Belgian&quot;, &quot;Other&quot;))
+freq_table</code></pre>
+<pre><code>##            Status
+## Data.Set    Dutch German Belgian Other
+##   Cluster 1     4     23       7    22
+##   Cluster 2     0     16       8    14</code></pre>
+<pre class="r"><code>Xsq_data &lt;- chisq.test(freq_table)
+Xsq_data$statistic</code></pre>
+<pre><code>## X-squared 
+##  3.793133</code></pre>
+<pre class="r"><code>Xsq_data$p.value</code></pre>
+<pre><code>## [1] 0.2846858</code></pre>
+<pre class="r"><code>#Hypothesis test for Living:
+ttest(training = cluster1d$Living, testing = cluster2d$Living)</code></pre>
+<pre><code>## [1] 0.5991855</code></pre>
+<pre class="r"><code>#Hypothesis test for HHsize:
+ttest(training = cluster1d$HHSize, testing = cluster2d$HHSize)</code></pre>
+<pre><code>## [1] 0.04665731</code></pre>
+<pre class="r"><code>#Since Device is a nominal variable, the Chi-squared test will be used.
+freq1_1 &lt;- sum(cluster1d$Device == 1)
+freq1_2 &lt;- sum(cluster1d$Device == 2)
+freq1_3 &lt;- sum(cluster1d$Device == 3)
+freq1_4 &lt;- sum(cluster1d$Device == 4)
+
+freq2_1 &lt;- sum(cluster2d$Device == 1)
+freq2_2 &lt;- sum(cluster2d$Device == 2)
+freq2_3 &lt;- sum(cluster2d$Device == 3)
+freq2_4 &lt;- sum(cluster2d$Device == 4)
+freq_table &lt;- as.table(rbind(c(freq1_1, freq1_2, freq1_3, freq1_4),
+                             c(freq2_1, freq2_2, freq2_3, freq2_4)))
+dimnames(freq_table) &lt;- list(
+Data.Set = c(&quot;Cluster 1&quot;, &quot;Cluster 2&quot;),
+Status = c(&quot;Laptop&quot;, &quot;PC&quot;, &quot;Tablet&quot;, &quot;Phone&quot;))
+freq_table</code></pre>
+<pre><code>##            Status
+## Data.Set    Laptop PC Tablet Phone
+##   Cluster 1     33  4      4    15
+##   Cluster 2     14  2     10    12</code></pre>
+<pre class="r"><code>Xsq_data &lt;- chisq.test(freq_table)
+
+Xsq_data$statistic</code></pre>
+<pre><code>## X-squared 
+##  8.102578</code></pre>
+<pre class="r"><code>Xsq_data$p.value</code></pre>
+<pre><code>## [1] 0.04393862</code></pre>
+<p><strong>Results:</strong></p>
+<ul>
+<li>The hypothesis tests were supposed to determine whether the
+difference between the two clusters are significant. Based on these
+p-values, we can see that the results are mixed.</li>
+<li>Variables Age, HHSize and Device show p-values below the 0.10
+significance level, so we can conclude that there there are significant
+differences between the two clusters.</li>
+<li>Variables Living, Gender and Nationality do not provide enough
+evidence to say that there are significant differences between the two
+segments.</li>
+</ul>
+<p><br></p>
+</div>
+<div id="data-visualisation" class="section level1">
+<h1>4. Data Visualisation</h1>
+<ul>
+<li>Creation of a profile of both clusters (“snake chart”) using the
+variables from the data set which represent some of consumers’ needs
+with respect to online streaming services, i.e., streaming usage,
+entertainment, recommendations, pastime (hint: please make use of the
+standardized variables to create the cluster profiles).</li>
+<li>Analysis of variables where differences are found. For this/these
+variable(s), the appropriate hypothesis test(s) are conducted to check
+if this/these difference(s) is/are statistically different (the original
+values of the variable(s) are used for hypothesis testing).</li>
+<li>Variables from the data set which represent some of consumers’ needs
+with respect to online streaming services: ZStreamingUsage,
+ZEntertainment, ZRecommendation, ZPastime <br> <img
+src="Snake%20chart.jpg" /><!-- --> <br> <br> <strong>Results:</strong>
+The most notable results are that clusters 1 and 2 differ the most when
+it comes to Streaming usage. The 2nd greatest difference in standardised
+scores is in Entertainment. Conversely, both clusters score very
+similarly for Recommendations, and displayed a moderate difference when
+it came to Pastime.</li>
+</ul>
+<p>Interpretation of the Snake Chart:</p>
+<ul>
+<li>Despite being around the same age (17-23 years old), the respondents
+seem to have very different attitudes and priorities when it comes to
+streaming videos.</li>
+<li>Cluster 1: High standardised scores in both Streaming Usage and
+Entertainment indicate that respondents spend a lot of time streaming
+videos online, they do not stream for Entertainment. It could be that
+they use it for more pragmatic reasons such as supplementing their
+education, since most would still be schooling.</li>
+<li>Cluster 2: Low standardised scores in both Streaming Usage and
+Entertainment indicate that respondents generally do not spend a lot of
+hours (daily) watching videos via streaming services, but when they do,
+they do it for entertainment.</li>
+<li>Both clusters are receptive and responsive to recommendations for
+videos from online streaming services.</li>
+<li>Both clusters generally disagree that they consume online videos to
+pass the time. This finding also indicates that Cluster 1 is more
+consistent since it has high standardised scores for Entertainment.</li>
+</ul>
+<p><br></p>
+<pre class="r"><code>#Hypothesis tests
+ttest(training = cluster1d$ZStreamingUsage, testing = cluster2d$ZStreamingUsage)</code></pre>
+<pre><code>## [1] 0.1577568</code></pre>
+<pre class="r"><code>ttest(training = cluster1d$ZEntertainment, testing = cluster2d$ZEntertainment)</code></pre>
+<pre><code>## [1] 0.3048904</code></pre>
+<pre class="r"><code>ttest(training = cluster1d$ZRecommendation, testing = cluster2d$ZRecommendation)</code></pre>
+<pre><code>## [1] 0.9609302</code></pre>
+<pre class="r"><code>ttest(training = cluster1d$ZPastime, testing = cluster2d$ZPastime)</code></pre>
+<pre><code>## [1] 0.8829256</code></pre>
+<p><br> <strong>Results:</strong> All variables used have p-values that
+are much larger than the 5% or 10% significance levels. This implies
+that none of the clusters have statistically significant different
+means. <br><br></p>
+</div>
+<div id="conclusion" class="section level1">
+<h1>5. Conclusion</h1>
+<p>Meaningful insights for Disney+. <br> <br> <strong>Insights:</strong>
+<br></p>
+<ul>
+<li><p>The striking differences in Streaming usage indicate that
+respondents allocate very disparate number of hours daily to watching
+online videos. This is interesting for marketers to note, because
+despite being around the same age(17-23 years old), the respondents seem
+to have very different attitudes and priorities when it comes to
+streaming videos for entertainment. Disney would also have to be extra
+mindful when selecting marketing techniques as techniques like mass
+marketing which would be disadvantageous.</p></li>
+<li><p>The great difference in Entertainment correspond to the resulting
+scores for Streaming usage. Respondents in cluster 1 seem to have a
+strong aversion to streaming videos for entertainment. On the other
+hand, respondents from cluster 2 display a moderate inclination to
+steaming online videos for entertainment.</p></li>
+<li><p>Similar scores between both clusters for Recommendations indicate
+that youths(at least in this sample) are not easily influenced by the
+recommendations offered by online streaming services. For marketers,
+this could correlate to ineffectuality if they were to market products
+via online streaming platforms. This could also hint that Disney should
+focus their marketing efforts on other platforms.</p></li>
+<li><p>Lastly, both clusters have moderate scores between 0 and 0.5.
+This indicates that respondents from both clusters generally do not
+consume online videos as a way to pass their time. This finding supports
+findings from Recommendations’ scores.</p></li>
+</ul>
+<p>Overall, it seems that these youths do not enjoy streaming online
+videos for entertainment and are also not easily swayed by
+recommendations offered via 3rd party streaming services. For Disney to
+appeal to this niche market, it would be wise to conduct more intensive
+research into youth’s behavioural and psychographic characteristics.</p>
+<p><br> <strong>Characterisation:</strong> <br> Cluster 1 - Respondents
+are generally more pragmatic and cautious about how they consume online
+streaming services.</p>
+<p>Cluster 2 - Repondents are generally more receptive, open-minded, .
+They could also be more creative, playful youths since one would have to
+be rather imaginative to enjoy Disney’s productions.</p>
+<p><br> <strong>Marketing Suggestions:</strong></p>
+<ul>
+<li><p>Recommended target group: Cluster 2</p>
+<ul>
+<li>They are the ideal market segment for Disney since they prefer to
+stream videos for entertainment. There is a lot of potential for Disney
+to gain a foothold in the online streaming industry, if they can
+encourage relatively hedonistic respondents to stream Disney
+productions, and to stream Disney videos more frequently.</li>
+</ul></li>
+<li><p>Focus on Differentiated Marketing.</p>
+<ul>
+<li>Benefit of Differentiated Marketing: Disney can hope for higher
+sales and a stronger position when catering to different clusters.</li>
+<li>Cost of Differentiated Marketing: Disney could incur higher costs eg
+for extra marketing research, forecasting, sales analysis, promotion
+planning and channel management.</li>
+</ul></li>
+<li><p>A possible strategy Disney could capitalise on is to appeal to
+millennials’ nostalgia since many millennials would have watched Disney
+productions growing up.</p></li>
+<li><p>Disney could also offer a More for Less proposition, as youths at
+this age tend to be more attracted to value-for-money entertainment
+since most would still be schooling rather than working.</p></li>
+</ul>
+<p><br></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
