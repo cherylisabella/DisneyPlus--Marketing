@@ -1,13 +1,13 @@
 ---
 title: "**Segmentation, Targeting, Positioning**"
 author: Cheryl  Isabella
-output:
-  html_document:
-    toc: true
-    toc_float: true
-    toc_depth: 2
-    theme: cosmo
-    df_print: paged
+output: html_document
+knit: (function(input_file, encoding) {
+    out_dir <- 'docs';
+    rmarkdown::render(input_file,
+      encoding=encoding,
+      output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+  
 ---
 ```{r setup , warning=FALSE, fig.align='center', echo= FALSE, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
