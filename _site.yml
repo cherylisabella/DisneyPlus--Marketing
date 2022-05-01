@@ -1,0 +1,13 @@
+name: "disneyplus"
+output_dir: "docs"
+output:
+    html_document:
+      theme: cosmo
+navbar:
+    title: "DisneyPlus"
+    left:
+    - text: "Home"
+      href: index.html
+    - text: "STP"
+      href: STP.html
+

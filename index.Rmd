@@ -1,0 +1,35 @@
+---
+title: "**Disney +**"
+subtitle: "Marketing and Business Analytics"
+author: Cheryl  Isabella
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    theme: cosmo
+    df_print: paged
+---
+<br>
+
+# Segmentation Data
+
+The columns in the data set include:
+<br>
+```{r, echo=FALSE}
+#Table of variables
+knitr::include_graphics("C:/Users/Isabella/Documents/Github/DisneyPlus/v.jpg")
+```
+<br>
+Data preparation before import into STP.rmd:
+
+- The data has been scanned for potential outliers and misspecified data. During this process, 14 respondents were discarded (e.g., due to a failed attention check, misunderstanding of (a) question(s), etc.).
+- Also, the data has been checked for multicollinearity and highly correlated variables were deleted for further analysis.
+- Due to the small sample size, some data entries had to be duplicated.
+- Moreover, the present data has already been reduced such as that multi-item scales, e.g., price consciousness, have been combined (please also see the information on the Cronbachs Alpha in the variable table).
+- For selected variables, the standardized values (mean = 0, SD = 1) are also included in the data set (indicated by the Z added in front of the variable name).
+
+# Goals
+
+# Tools
+R and Microsoft Excel were used in this project.
